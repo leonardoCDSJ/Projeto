@@ -13,10 +13,31 @@ nav{
 
 #menu{
 	font-size: 30px;
+	cursor: pointer;
 }
 
-#search{
-	font-size: 20px;
+.formulario{
+	position: relative;
+	width: 200px;
+}
+
+.formulario input{
+	width: 100%;
+	height: 30px;
+	padding-right: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+	outline: none;
+}
+
+.formulario i{
+	position: absolute;
+	right: 20px;
+	top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
 }
 
 main{
@@ -26,9 +47,8 @@ main{
 }
 
 #coluna-direita{
-	background: gray;
-	height: 800px;
-	width: 70%;
+	height: auto;
+	width: 80%;
 	float: right;
 	padding: 10px;
 }
@@ -39,7 +59,7 @@ aside{
 	background: lightgray;
 	gap: 50px;
 	height: 800px;
-	width: 30%;
+	width: 20%;
 	float: left;
 }
 
@@ -52,5 +72,5 @@ aside{
 .conteudo{
 	height: 200px;
 	width: 300px;
-	background: #fff;
+	background: #C0C0C0;
 }
