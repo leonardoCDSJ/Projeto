@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+#menu{
+	font-size: 30px;
+}
+
+#search{
+	font-size: 20px;
+}
+
+main{
+	display: table;
+	width: 100%;
+	height: auto;
+}
+
+#coluna-direita{
+	background: gray;
+	height: 800px;
+	width: 70%;
+	float: right;
+	padding: 10px;
+}
+
+aside{
+	display: flex;
+	flex-direction: column;
+	background: lightgray;
+	gap: 50px;
+	height: 800px;
+	width: 30%;
+	float: left;
+}
+
+#coluna-direita{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.conteudo{
+	height: 200px;
+	width: 300px;
+	background: #fff;
+}
