@@ -39,6 +39,7 @@ body{
 #titulo{
 	color: #fff;
 	font-size: 40px;
+	margin-left: 40px;
 }
 
 .menu-lateral{
@@ -104,7 +105,8 @@ main{
 }
 
 main h1{
-	margin: 20px 0 0 20px;;
+	margin: 20px 0 0 20px;
+	color: #FFD700;
 }
 
 main section {
@@ -120,11 +122,17 @@ main section {
 }
 
 main section .conteudo{
+	display: flex;
 	border: 1px solid;
 	border-radius: 20px;
 	height: 200px;
 	width: 400px;
 	background: #FFFFE0;
+}
+
+main section .conteudo .legenda-conteudo{
+
+	
 }
 
 @media(max-width: 600px){
