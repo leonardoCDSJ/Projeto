@@ -42,7 +42,7 @@ body{
 }
 
 #titulo{
-	color: #fff;
+	color: #000;
 	font-size: 40px;
 	margin-left: 40px;
 }
@@ -58,7 +58,7 @@ body{
 	top: 67px;
 	left:0;
 	overflow: hidden;
-	transition: 0.2s
+	transition: width 0.3s ease-in-out;
 }
 
 .menu-lateral:hover{ /*Ativação do menu-lateral ao passar o mouse sobre ele*/
@@ -147,6 +147,12 @@ main{ /*DIV do conteúdo principal*/
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+.categorias button:hover {
+  background: #FFD700;
+  color: #000;
+  transition: 0.3s;
 }
 
 main section { /*Seção dentro da div principal*/
