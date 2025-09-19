@@ -1,15 +1,15 @@
-*{
+*{ /*Configuração padrão*/
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 body{
-	overflow-x: hidden;
+	overflow-x: hidden; /*Pra pagina não se mover na posição lateral, apenas de cima pra baixo*/
 	background: #fff;
 }
 
-#busca{
+#busca{ /*Titulo das paginas, que tem a barra de busca, nome, etc.*/
 	display: flex;
 	align-items: center;
 	position: fixed;
@@ -19,10 +19,10 @@ body{
     background-color: #FFD700;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1;
+	z-index: 1;
 }
 
-#busca input {
+#busca input {/*Definindo a aparência da barra de busca*/
 	position: absolute;
 	right: 70px;
 	float: right;
@@ -30,33 +30,11 @@ body{
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-	float: right;
 	outline: none;
 	border-radius: 30px;
 }
 
-#titulo{
-	color: #fff;
-	font-size: 40px;
-	margin-left: 40px;
-}
-
-.menu-lateral{
-	height: 100%;
-	width: 60px;
-	background: #DAA520;
-	padding: 40px 0 40px 1%;
-	box-shadow: 3px 0 0 #F54927;
-	position: fixed;
-	z-index: 2;
-	top: 67px;
-	left:0;
-	overflow: hidden;
-	transition: 0.2s
-}
-
-#logo{
+#logo{ /*Símbolo da página*/
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -64,7 +42,27 @@ body{
 	border-radius: 50%;
 }
 
-.menu-lateral:hover{
+#titulo{
+	color: #000;
+	font-size: 40px;
+	margin-left: 40px;
+}
+
+.menu-lateral{ /*Menu lateral. O nome já é auto explicativo*/
+	height: 100%;
+	width: 60px;
+	background: #DAA520;
+	padding: 40px 0 40px 1%;
+	box-shadow: 3px 0 0 #F54927;
+	position: fixed;
+	z-index: 1;
+	top: 67px;
+	left:0;
+	overflow: hidden;
+	transition: width 0.3s ease-in-out;
+}
+
+.menu-lateral:hover{ /*Ativação do menu-lateral ao passar o mouse sobre ele*/
 	width: 300px;
 }
 
@@ -98,6 +96,8 @@ ul li i{
 	font-size: 30px;
 }
 
+/*Aqui acaba a configuração do menu lateral*/
+
 main{
 	height: 100%;
 	margin-left: 60px;
@@ -125,13 +125,14 @@ main section .conteudo {
     display: flex;
     align-items: flex-end; /* posiciona o conteúdo da legenda embaixo */
     justify-content: center;
-    padding: 10px;
+	padding: 20px;
     border: 1px solid;
     border-radius: 20px;
     height: 200px;
     width: 400px;
     background: #FFFFE0;
     overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 main section .conteudo .legenda-conteudo {
