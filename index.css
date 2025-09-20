@@ -176,10 +176,18 @@ main section .caixa-conteudo{/*DIV que engloba os conteúdos da página*/
 }
 
 main section .conteudo{/*Auto explicativo*/
-	border: 2px solid #C0C0C0;
-	border-radius: 2px;
+	padding: 20px;
+	border: 1px solid #ccc;
+    border-radius: 20px;
 	height: 200px;
 	width: 400px;
+	background: #FFFFE0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease;
+}
+
+main section .conteudo:hover {
+	transform: scale(1.02);
 }
 
 main section .caixa-conteudo p{ /*Legendas abaixo do contúdo*/

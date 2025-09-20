@@ -104,7 +104,7 @@ main {
 }
 
 main h1 {
-    margin: 20px 0;
+    margin: 50px 0 0 20px;
     color: #FFD700;
 }
 
@@ -129,6 +129,7 @@ main h1 {
     flex: 1 1 300px;
     background: #FFFFE0;
     padding: 20px;
+	border: 1px solid #ccc;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
