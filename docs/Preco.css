@@ -50,17 +50,17 @@ body {
 }
 
 .menu-lateral {
-	height: 100%;
-	width: 60px;
-	background: #DAA520;
-	padding: 40px 0 40px 1%;
-	box-shadow: 3px 0 0 #F54927;
-	position: fixed;
-	z-index: 2;
-	top: 67px;
-	left: 0;
-	overflow: hidden;
-	transition: 0.2s;
+    height: 100vh;
+    width: 60px;
+    background: #DAA520;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #F54927;
+    position: fixed;
+    z-index: 2;
+    top: 67px;
+    left: 0;
+    overflow-y: auto;
+    transition: 0.2s;
 }
 
 .menu-lateral:hover {
