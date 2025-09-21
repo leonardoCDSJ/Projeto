@@ -204,3 +204,29 @@ footer{ /*DIV do fundo da página*/
 	color: #fff;
 	padding: 15px 0;
 }
+
+@media(max-width: 425px){
+	.menu-lateral{
+		width: 0;
+		padding: 40px 0;
+		overflow: hidden;
+	}
+	
+	.menu-lateral:hover{
+		width: 200px;
+	}
+	
+	main{
+		margin-left: 0;
+	}
+	
+	main section{
+		max-width: 100%;
+		padding: 20px;
+	}
+	
+	main section{
+		width: 100%;
+		flex: 0 0 100%;
+	}
+}
