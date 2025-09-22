@@ -6,7 +6,7 @@
 
 body{
 	overflow-x: hidden; /*Pra pagina não se mover na posição lateral, apenas de cima pra baixo*/
-	background: #fff;
+	background: #F8FAFC;
 }
 
 #busca{ /*Titulo das paginas, que tem a barra de busca, nome, etc.*/
@@ -16,7 +16,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    background-color: #FFD700;
+    background-color: #2563EB;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	z-index: 1;
@@ -43,7 +43,7 @@ body{
 }
 
 #titulo{
-	color: #000;
+	color: #fff;
 	font-size: 40px;
 	margin-left: 40px;
 }
@@ -51,9 +51,9 @@ body{
 .menu-lateral {
     height: 100vh;
     width: 60px;
-    background: #DAA520;
+    background: #0EA5A4;
     padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #F54927;
+    box-shadow: 3px 0 0 #E5E7EB;
     position: fixed;
     z-index: 2;
     top: 67px;
@@ -76,7 +76,7 @@ ul li{
 }
 
 ul li:hover{
-	background: #EEDD82;
+	background: #1E40AF;
 }
 
 ul li a{
@@ -94,6 +94,7 @@ ul li a .link-texto{
 
 ul li i{
 	font-size: 30px;
+	color: #fff;
 }
 
 /*Aqui acaba a configuração do menu lateral*/
@@ -113,6 +114,7 @@ main{ /*DIV do conteúdo principal*/
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: #F8FAFC;
 }
 
 #caixa-categoria{ /*DIv que engloba as categorias(Aqueles círculos lá)*/
@@ -135,7 +137,7 @@ main{ /*DIV do conteúdo principal*/
 .categorias .circulo{/*Auto explicativo*/
 	height: 100px;
 	width: 100px;
-	border: 2px solid #FFD700;
+	border: 2px solid #0EA5A4;
 }
 
 .categorias .circulo img{
@@ -145,7 +147,7 @@ main{ /*DIV do conteúdo principal*/
 }
 
 .categorias button{/*Auto explicativo*/
-	background: #343333;
+	background: #0EA5A4;
 	width: 100px;
 	padding: 10px;
 	color: #fff;
@@ -155,7 +157,7 @@ main{ /*DIV do conteúdo principal*/
 }
 
 .categorias button:hover {
-  background: #FFD700;
+  background: #1E40AF;
   color: #000;
   transition: 0.3s;
 }
@@ -203,13 +205,38 @@ main section .caixa-conteudo p{ /*Legendas abaixo do contúdo*/
 	background: #DCDCDC;
 }
 
-footer{ /*DIV do fundo da página*/
-	height: 80px;
-	background: gray;
-	font-size: 16px;
-	text-align: center;
-	color: #fff;
-	padding: 15px 0;
+.footer{
+  background:#3f3f3f;   /* pode trocar */
+  color:#fff;
+  margin-top:24px;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+.footer a{ color:#fff; text-decoration:none; }
+.footer a:hover{ text-decoration:underline; }
+
+.footer-box{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px 16px;
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+.footer .col{ flex:1 1 220px; }
+.footer h3{ margin:0 0 8px; color:#ffd400; }
+.footer h4{ margin:0 0 8px; font-size:16px; }
+.footer p{ margin:0; opacity:.9; }
+.footer ul{ list-style:none; padding:0; margin:0; }
+.footer li{ margin:6px 0; }
+
+.footer-copy{
+  border-top:1px solid rgba(255,255,255,.15);
+  text-align:center;
+  padding:12px 16px;
+  font-size:14px;
+  opacity:.9;
 }
 
 @media(max-width: 425px){
