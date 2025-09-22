@@ -104,7 +104,7 @@ ul li i{
 
 #imagemHome{ /*Imagem do início*/
 	width: 100%;
-	height: 500px;
+	height: 350px;
 	object-fit: cover;
 }
 
@@ -135,9 +135,13 @@ main{ /*DIV do conteúdo principal*/
 .categorias .circulo{/*Auto explicativo*/
 	height: 100px;
 	width: 100px;
-	background: #ffff66;
 	border: 2px solid #FFD700;
-	border-radius: 50%;
+}
+
+.categorias .circulo img{
+	max-width: 100%; 
+	height: 100%; 
+	display: block;
 }
 
 .categorias button{/*Auto explicativo*/
@@ -176,6 +180,9 @@ main section .caixa-conteudo{/*DIV que engloba os conteúdos da página*/
 }
 
 main section .conteudo{/*Auto explicativo*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 20px;
 	border: 1px solid #ccc;
     border-radius: 20px;
