@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, #2563EB, #1E40AF);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD */
+.box{
+    background: #d7ebf1;
+    padding: 40px 45px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* FIELDSET */
+fieldset{
+    border: none;
+}
+
+/* TÍTULO */
+legend{
+    text-align: center;
+    font-size: 28px;
+    color: #DAA520; /* dourado */
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* INPUTS */
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+    transition: border .2s, box-shadow .2s;
+}
+
+.inputUser:focus{
+    border-color: #2563EB;
+    box-shadow: 0 0 0 2px rgba(37,99,235,.2);
+}
+
+/* LABEL FLUTUANTE */
+.inputBox label{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    color: #6b7280;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: .3s;
+    background: #fff;
+    padding: 0 6px;
+}
+
+.inputUser:focus ~ label,
+.inputUser:valid ~ label{
+    top: -8px;
+    font-size: 12px;
+    color: #2563EB;
+}
+
+/* TEXTO SEXO */
+p{
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* RADIO */
+input[type="radio"]{
+    accent-color: #2563EB;
+    margin-right: 5px;
+}
+
+label{
+    margin-right: 15px;
+    color: #1f2937;
+    font-size: 14px;
+}
+
+/* BOTÃO */
+#submit{
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(90deg, #2563EB, #1E40AF);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#submit:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,.25);
+}
