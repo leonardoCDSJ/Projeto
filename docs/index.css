@@ -1,295 +1,273 @@
-*{ /*Configuração padrão*/
+/* RESET */
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 body{
-	overflow-x: hidden; /*Pra pagina não se mover na posição lateral, apenas de cima pra baixo*/
+	font-family: 'Segoe UI', system-ui, sans-serif;
 	background: #F8FAFC;
+	color: #1F2937;
+	overflow-x: hidden;
 }
 
-#busca{ /*Titulo das paginas, que tem a barra de busca, nome, etc.*/
+/* ================= HEADER ================= */
+
+#busca{
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #2563EB;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background: linear-gradient(90deg, #2563EB, #1E40AF);
+	padding: 0 24px 0 80px;
+	z-index: 3;
+	box-shadow: 0 4px 10px rgba(0,0,0,.15);
 }
 
-#busca input {/*Definindo a aparência da barra de busca*/
-	position: absolute;
-	right: 70px;
-	float: right;
-    width: 40%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-	outline: none;
-	border-radius: 30px;
+#caixa-logo{
+	display: flex;
+	align-items: center;
+	gap: 12px;
 }
 
-#logo{ /*Símbolo da página*/
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	height: 40px;
+#logo{
+	height: 42px;
 	border-radius: 50%;
 }
 
 #titulo{
 	color: #fff;
-	font-size: 40px;
-	margin-left: 40px;
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
-.menu-lateral {
-    height: 100vh;
-    width: 60px;
-    background: #0EA5A4;
-    padding: 40px 0 40px 1%;
-    box-shadow: 3px 0 0 #E5E7EB;
-    position: fixed;
-    z-index: 2;
-    top: 67px;
-    left: 0;
-    overflow-y: auto;
-    transition: 0.2s;
-}
-
-.menu-lateral:hover{ /*Ativação do menu-lateral ao passar o mouse sobre ele*/
-	width: 300px;
-}
-
-ul{
-	height: 100%;
-	list-style: none;
-}
-
-ul li{
-	transition: 0.2s;
-}
-
-ul li:hover{
-	background: #1E40AF;
-}
-
-ul li a{
-	color: #fff;
-	text-decoration: none;
-	font-size: 20px;
-	padding: 20px 4%;
-	display: flex;
-	line-height:30px;
-}
-
-ul li a .link-texto{
-	margin-left: 30px;
-}
-
-ul li i{
-	font-size: 30px;
-	color: #fff;
-}
-
-/*Aqui acaba a configuração do menu lateral*/
-
-#caixa-imagem{ 
-	width: 100%;
-}
-
-#imagemHome{ /*Imagem do início*/
-	width: 100%;
-	height: 350px;
-	object-fit: cover;
-}
-
-main{ /*DIV do conteúdo principal*/
-	margin: 60px 0 30px 60px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #F8FAFC;
-}
-
-#caixa-categoria{ /*DIv que engloba as categorias(Aqueles círculos lá)*/
-	display: flex;
-	margin-top: 30px;
-	gap: 30px;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.categorias { /*Auto explicativo*/
-	height: 200px;
-	width: 200px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.categorias .circulo{/*Auto explicativo*/
-	height: 100px;
-	width: 100px;
-	border: 2px solid #0EA5A4;
-}
-
-.categorias .circulo img{
-	max-width: 100%; 
-	height: 100%; 
-	display: block;
-}
-
-.categorias button{/*Auto explicativo*/
-	background: #0EA5A4;
-	width: 100px;
-	padding: 10px;
-	color: #fff;
+#busca input{
+	width: 35%;
+	padding: 10px 16px;
+	border-radius: 25px;
 	border: none;
-	border-radius: 5px;
+	outline: none;
+	font-size: 15px;
+	box-shadow: inset 0 0 5px rgba(0,0,0,.15);
+}
+
+/* ================= MENU LATERAL ================= */
+
+.menu-lateral{
+	position: fixed;
+	top: 70px;
+	left: 0;
+	height: 100vh;
+	width: 70px;
+	background: #0EA5A4;
+	transition: .3s;
+	z-index: 2;
+	box-shadow: 4px 0 12px rgba(0,0,0,.1);
+	overflow: hidden;
+}
+
+.menu-lateral.expandir{
+	width: 260px;
+}
+
+.btn-expandir{
+	width: 100%;
+	padding-left: 20px;
+}
+
+.btn-expandir i{
+	color: #fff;
 	cursor: pointer;
 }
 
-.categorias button:hover {
-  background: #1E40AF;
-  color: #000;
-  transition: 0.3s;
+.menu-lateral ul{
+	list-style: none;
 }
 
-main section { /*Seção dentro da div principal*/
-	width: 100%;
-	height: 100%;
-	padding: 20px 0 20px;
+.menu-lateral li a{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 30px;
-	margin: 0 auto;
+	align-items: center;
+	gap: 25px;
+	padding: 18px 20px;
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+	transition: .3s;
 }
 
-main section .caixa-conteudo{/*DIV que engloba os conteúdos da página*/
+.menu-lateral li a:hover{
+	background: rgba(0,0,0,.2);
+}
+
+.menu-lateral i{
+	font-size: 30px;
+}
+
+/* ================= MAIN ================= */
+
+main{
+	margin: 90px 20px 30px 90px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 400px;
-	gap: 20px;
+	gap: 40px;
 }
 
-main section .conteudo{/*Auto explicativo*/
+/* Imagem principal */
+#imagemHome{
+	width: 100%;
+	max-width: 1200px;
+	height: 360px;
+	object-fit: cover;
+	border-radius: 20px;
+	box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ================= CATEGORIAS ================= */
+
+#caixa-categoria{
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.categorias{
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+}
+
+.circulo{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 3px solid #0EA5A4;
+	box-shadow: 0 6px 15px rgba(0,0,0,.15);
+	transition: transform .3s;
+}
+
+.circulo img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.categorias:hover .circulo{
+	transform: scale(1.08);
+}
+
+.categorias button{
+	background: #0EA5A4;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-size: 15px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.categorias button:hover{
+	background: #1E40AF;
+}
+
+/* ================= CARDS ================= */
+
+main section{
+	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	border: 1px solid #ccc;
-    border-radius: 20px;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.caixa-conteudo{
+	width: 380px;
+}
+
+.conteudo{
 	height: 200px;
-	width: 400px;
-	background: #d7ebf1;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 10px 25px rgba(0,0,0,.12);
+	font-size: 22px;
+	font-weight: bold;
+	color: #0EA5A4;
+	transition: transform .3s, box-shadow .3s;
 }
 
-main section .conteudo:hover {
-	transform: scale(1.02);
+.conteudo:hover{
+	transform: translateY(-6px);
+	box-shadow: 0 18px 35px rgba(0,0,0,.18);
 }
 
-main section .caixa-conteudo p{ /*Legendas abaixo do contúdo*/
-	width: 100%;
-	text-align: justify;
-	background: #DCDCDC;
-}
-
+/* ================= FOOTER ================= */
 
 footer{
-  background:#3f3f3f;   /* pode trocar */
-  color:#fff;
-  margin-top:24px;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-}
-
-footer a{ 
-	color:#fff;
-	text-decoration:none;
-}
-
-footer a:hover{ 
-	text-decoration:underline; 
+	background: #111827;
+	color: #fff;
+	margin-top: 50px;
 }
 
 .footer-box{
-  max-width:1100px;
-  margin:0 auto;
-  padding:24px 16px;
-  display:flex;
-  gap:24px;
-  flex-wrap:wrap;
-}
-
-footer .contato{
-	flex:1 1 220px; 
+	max-width: 1100px;
+	margin: auto;
+	padding: 30px 20px;
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
 }
 
 footer h3{
-	margin:0 0 8px; 
-	color:#ffd400; 
+	color: #0EA5A4;
 }
 
-footer h4{ 
-	margin:0 0 8px; 
-	font-size:16px; 
+footer h4{
+	margin-bottom: 10px;
 }
 
-footer p{
-	margin:0; 
-	opacity:.9; 
+footer a{
+	color: #E5E7EB;
+	text-decoration: none;
 }
 
-footer ul{
-	list-style:none;
-	padding:0;
-	margin:0; 
-}
-
-footer li{
-	margin:6px 0; 
+footer a:hover{
+	color: #0EA5A4;
 }
 
 .direitos{
-  border-top:1px solid rgba(255,255,255,.15);
-  text-align:center;
-  padding:12px 16px;
-  font-size:14px;
-  opacity:.9;
+	border-top: 1px solid rgba(255,255,255,.2);
+	text-align: center;
+	padding: 15px;
+	font-size: 14px;
 }
 
-@media(max-width: 425px){
+/* ================= MOBILE ================= */
+
+@media(max-width: 768px){
 	.menu-lateral{
 		width: 0;
-		padding: 40px 0;
 		overflow: hidden;
 	}
-	
-	.menu-lateral:hover{
-		width: 200px;
-	}
-	
+
 	main{
-		margin-left: 0;
+		margin: 90px 10px;
 	}
-	
-	main section{
-		max-width: 100%;
-		padding: 20px;
-	}
-	
-	main section{
-		width: 100%;
-		flex: 0 0 100%;
+
+	#busca input{
+		width: 55%;
 	}
 }
